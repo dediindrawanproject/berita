@@ -266,4 +266,41 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4522924&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
+
+<!-- Auto Translate (All Language - No Manual Display) -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const userLang = (navigator.language || navigator.userLanguage).split('-')[0];
+  if (userLang && userLang !== "id") {
+    const s = document.createElement("script");
+    s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    s.async = true;
+    document.body.appendChild(s);
+
+    window.googleTranslateElementInit = function() {
+      new google.translate.TranslateElement({
+        pageLanguage: "id",
+        includedLanguages: "af,sq,am,ar,hy,az,eu,be,bn,bg,bs,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,tl,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,iw,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sd,si,sk,sl,so,es,su,sw,sv,tg,ta,te,th,tr,uk,ur,uz,vi,cy,xh,yi,yo,zu",
+        autoDisplay: false
+      });
+    };
+
+    // Hilangkan tampilan Google Translate bawaan
+    const style = document.createElement("style");
+    style.innerHTML = `
+      #google_translate_element, .goog-te-banner-frame, .goog-te-menu-frame, 
+      .goog-te-gadget-icon, .goog-logo-link, .goog-te-balloon-frame, 
+      .goog-tooltip, .goog-tooltip:hover {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      body { top: 0 !important; }
+    `;
+    document.head.appendChild(style);
+  }
+});
+</script>
+<!-- End Auto Translate -->
+
+  
 </html>
